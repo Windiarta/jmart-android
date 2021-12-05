@@ -33,11 +33,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        EditText email = findViewById(R.id.LoginEmail);
-        EditText password = findViewById(R.id.LoginPassword);
-        Button button = findViewById(R.id.LoginButton);
-        TextView text = findViewById(R.id.LoginText);
-        TextView register = findViewById(R.id.LoginRegister);
+        EditText email = findViewById(R.id.login_email);
+        EditText password = findViewById(R.id.login_password);
+        Button button = findViewById(R.id.login_button);
+        TextView register = findViewById(R.id.login_register);
 
         button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -48,13 +47,13 @@ public class LoginActivity extends AppCompatActivity {
                         try{
                             JSONObject object = new JSONObject(response);
                             if(object != null){
-                                Toast.makeText(LoginActivity.this, "Log-in Success", Toast.LENGTH_SHORT);
+                                Toast.makeText(LoginActivity.this, "Log-in Success", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 loggedAccount = gson.fromJson(object.toString(), Account.class);
                                 startActivity(intent);
                             }
                         } catch (JSONException e){
-                            Toast.makeText(LoginActivity.this, "Log-in Error",  Toast.LENGTH_SHORT);
+                            Toast.makeText(LoginActivity.this, "Log-in Failed",  Toast.LENGTH_LONG).show();
                         }
                     }
                 };
@@ -78,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                     startActivity(intent);
                 } catch (Throwable e){
-                    Toast.makeText(LoginActivity.this, "Cannot move", Toast.LENGTH_LONG);
+                    Toast.makeText(LoginActivity.this, "Try Again", Toast.LENGTH_LONG).show();
                 }
             }
         });

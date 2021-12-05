@@ -1,5 +1,6 @@
 package com.windiartaJmartFA.model;
 
 public class Serializable {
-    public final int id = -1;
+    //private static HashMap<Class<?>, Integer> mapCounter = new HashMap<>();
+    public static int id;
 }

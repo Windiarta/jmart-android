@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shipmentPlans">
+        <item>INSTANT</item>
+        <item>SAME DAY</item>
+        <item>NEXT DAY</item>
+        <item>REGULER</item>
+        <item>KARGO</item>
+    </string-array>
+
+    <string-array name="ProductCategory">
+        <item>ALL</item>
+        <item>ART_CRAFT</item>
+        <item>AUTOMOTIVE</item>
+        <item>BOOK</item>
+        <item>CARPENTRY</item>
+        <item>COSMETICS</item>
+        <item>ELECTRONICS</item>
+        <item>FASHION</item>
+        <item>FNB</item>
+        <item>FURNITURE</item>
+        <item>GADGET</item>
+        <item>GAMING</item>
+        <item>HEALTHCARE</item>
+        <item>JEWELRY</item>
+        <item>KITCHEN</item>
+        <item>MISCELLANEOUS</item>
+        <item>MOTHERCARE</item>
+        <item>PETCARE</item>
+        <item>PROPERTY</item>
+        <item>SPORTS</item>
+        <item>STATIONERY</item>
+        <item>TOYS</item>
+        <item>TRAVEL</item>
+        <item>WEDDING</item>
+    </string-array>
+
+    <string-array name="ProductCategory1">
+        <item>ART_CRAFT</item>
+        <item>AUTOMOTIVE</item>
+        <item>BOOK</item>
+        <item>CARPENTRY</item>
+        <item>COSMETICS</item>
+        <item>ELECTRONICS</item>
+        <item>FASHION</item>
+        <item>FNB</item>
+        <item>FURNITURE</item>
+        <item>GADGET</item>
+        <item>GAMING</item>
+        <item>HEALTHCARE</item>
+        <item>JEWELRY</item>
+        <item>KITCHEN</item>
+        <item>MISCELLANEOUS</item>
+        <item>MOTHERCARE</item>
+        <item>PETCARE</item>
+        <item>PROPERTY</item>
+        <item>SPORTS</item>
+        <item>STATIONERY</item>
+        <item>TOYS</item>
+        <item>TRAVEL</item>
+        <item>WEDDING</item>
+    </string-array>
+</resources>

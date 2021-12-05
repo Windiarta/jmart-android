@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutMeActivity">
+
+    <TextView
+        android:id="@+id/aboutme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5pt"
+        android:paddingTop="5pt"
+        android:text="Account Details"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5pt"
+        android:paddingTop="30pt"
+        android:paddingRight="5pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/accountnametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/accountname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="No Name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/accountemailtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountnametext"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="10dp"
+            android:text="Email" />
+
+        <TextView
+            android:id="@+id/accountemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountname"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:text="No Email"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/accountbalancetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountemailtext"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="10dp"
+            android:text="Balance" />
+
+        <TextView
+            android:id="@+id/accountbalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountemail"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:text="0.0"
+            android:textColor="@color/teal_200" />
+
+        <EditText
+            android:id="@+id/accounttopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountbalance"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/accounttopupbutton"
+            android:hint="Top Up Amount"
+            android:paddingTop="30dp"
+            android:textSize="6pt" />
+
+        <Button
+            android:id="@id/accounttopupbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountbalance"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Top Up" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerstorebuttoncard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100pt"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10pt"
+            android:paddingRight="10pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/registerstorebutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Register Store"
+                android:textAlignment="center" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerstorecard"
+        android:layout_width="wrap_content"
+        android:layout_height="200pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100pt"
+        android:visibility="invisible">
+        <RelativeLayout
+            android:id="@+id/registerstore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10pt"
+            android:paddingRight="10pt"
+            app:layout_constraintStart_toEndOf="@+id/aboutme"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/storeview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5pt"
+                android:paddingTop="5pt"
+                android:text="Account Details"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/regstorename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storeview"
+                android:layout_marginTop="10dp"
+                android:hint="Name"
+                android:textSize="7pt" />
+
+            <EditText
+                android:id="@+id/regstoreaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regstorename"
+                android:layout_marginTop="10dp"
+                android:hint="Address"
+                android:textSize="7pt" />
+
+            <EditText
+                android:id="@+id/regstorephonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regstoreaddress"
+                android:layout_marginTop="10dp"
+                android:hint="Phone Number"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/regstorebutton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regstorephonenumber"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="20pt"
+                android:text="REGISTER" />
+
+            <Button
+                android:id="@+id/cancelstorebutton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regstorephonenumber"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20pt"
+                android:text="CANCEL" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aboutstorecard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100pt"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/store"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:paddingLeft="10pt"
+            android:paddingRight="10pt"
+            app:layout_constraintStart_toEndOf="@+id/aboutme"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/storetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5pt"
+                android:paddingTop="5pt"
+                android:paddingBottom="10dp"
+                android:text="Store"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/storenametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storetext"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/storename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storetext"
+                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:text="No Name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/storeaddresstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storenametext"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:text="Address" />
+
+            <TextView
+                android:id="@+id/storeaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storenametext"
+                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:text="No Address"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/storephonenumtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storeaddresstext"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:text="Phone Number" />
+
+            <TextView
+                android:id="@+id/storephonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storeaddresstext"
+                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:text="No Phone Number"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

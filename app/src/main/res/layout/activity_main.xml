@@ -6,15 +6,286 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="174dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="300dp"
-        android:text="Hello World!"
-        android:textAlignment="center"
-        android:textSize="24sp"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="408dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10pt"
+        android:paddingTop="3pt"
+        android:paddingRight="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/filter"
+            android:text="PRODUCT"
+            android:textAlignment="center"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/filter"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="FILTER"
+            android:textAlignment="center"
+            android:textSize="10pt" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product_card"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/prev_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="PREV" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="110dp"
+                android:text="NEXT" />
+
+            <EditText
+                android:id="@+id/page"
+                android:layout_width="40pt"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210dp"
+                android:text="0"
+                android:textSize="10pt" />
+
+            <Button
+                android:id="@+id/go_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="GO" />
+        </RelativeLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30pt"
+            android:orientation="vertical"
+            tools:context=".ListActivity">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filter_card"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="678dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/filter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/name_area"
+                android:layout_width="100pt"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_name"
+                android:hint="Name" />
+
+            <TextView
+                android:id="@+id/lowest_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_area"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/highest_price"
+                android:text="lowest" />
+
+            <TextView
+                android:id="@id/highest_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_area"
+                android:layout_alignParentRight="true"
+
+                android:text="highest" />
+
+            <EditText
+                android:id="@+id/lowest_filter"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_price"
+                android:layout_alignParentLeft="true"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_price"
+                android:layout_toRightOf="@id/lowest_filter"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:text="to" />
+
+            <EditText
+                android:id="@+id/highest_filter"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/highest_price"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/to"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_filter"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10pt"
+                android:text="Product Condition" />
+
+            <CheckBox
+                android:id="@+id/new_check_box"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_filter"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/condition"
+                android:paddingTop="10pt" />
+
+            <TextView
+                android:id="@+id/new_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_filter"
+                android:layout_toRightOf="@id/new_check_box"
+                android:paddingTop="10pt"
+                android:text="New" />
+
+            <CheckBox
+                android:id="@+id/used_check_box"
+                android:layout_width="31dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_filter"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/new_text"
+                android:paddingTop="10pt" />
+
+            <TextView
+                android:id="@+id/usedtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowest_filter"
+                android:layout_toRightOf="@id/used_check_box"
+                android:paddingTop="10pt"
+                android:text="Used" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/condition"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10pt"
+                android:text="Category" />
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/condition"
+                android:layout_alignParentRight="true"
+                android:entries="@array/ProductCategory"
+                android:paddingTop="10pt"
+                android:spinnerMode="dropdown"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/only_store_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10pt"
+                android:text="My Store Only" />
+
+            <CheckBox
+                android:id="@+id/only_store"
+                android:layout_width="33dp"
+                android:layout_height="34dp"
+                android:layout_below="@id/category"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5pt"
+                android:layout_marginRight="17dp"
+                android:paddingTop="10pt"
+                android:textAlignment="textEnd" />
+
+            <Button
+                android:id="@+id/apply_filter"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/only_store"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="50pt"
+                android:text="APPLY" />
+
+            <Button
+                android:id="@+id/clear_filter"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/only_store"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50pt"
+                android:text="CLEAR" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

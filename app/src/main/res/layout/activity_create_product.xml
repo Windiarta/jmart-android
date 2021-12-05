@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateProductActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Product"
+            android:textSize="10pt"
+            android:paddingBottom="10pt"/>
+        <EditText
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_title"
+            android:layout_marginTop="10dp"
+            android:hint="Name"/>
+        <EditText
+            android:id="@+id/product_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_name"
+            android:layout_marginTop="10dp"
+            android:hint="Weight"/>
+        <EditText
+            android:id="@+id/product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_weight"
+            android:layout_marginTop="10dp"
+            android:hint="Price"/>
+
+        <EditText
+            android:id="@+id/product_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_price"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10pt"
+            android:hint="Discount" />
+        <TextView
+        android:id="@+id/condition_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_discount"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentLeft="true"
+        android:text="Condition" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_below="@id/product_discount"
+            android:layout_above="@id/category_spinner">
+
+            <RadioButton
+                android:id="@+id/condition_new_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New" />
+
+            <RadioButton
+                android:id="@+id/condition_used_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/category_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/condition_text"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10pt"
+            android:text="Category"/>
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/condition_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10pt"
+            android:entries="@array/ProductCategory1"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:id="@+id/shipment_plan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/category_text"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10pt"
+            android:text="Shipment Plan"/>
+        <Spinner
+            android:id="@+id/shipment_plan_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/category_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10pt"
+            android:textAlignment="textEnd"
+            android:entries="@array/shipmentPlans" />
+        <Button
+            android:id="@+id/createproduct"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:layout_below="@id/shipment_plan_text"
+            android:layout_alignParentLeft="true"
+            android:text="create"/>
+        <Button
+            android:id="@+id/cancel_product"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:layout_below="@id/shipment_plan_text"
+            android:layout_alignParentRight="true"
+            android:text="CANCEL"/>
+    </RelativeLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

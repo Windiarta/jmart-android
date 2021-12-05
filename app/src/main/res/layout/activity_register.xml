@@ -6,57 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/RegisterEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/RegisterPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterEmail"
-        tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20pt"
+            android:fontFamily="sans-serif-black"
+            android:text="JMART"
+            android:textAlignment="center"
+            android:textColor="#410179"
+            android:textSize="30pt" />
 
-    <EditText
-        android:id="@+id/RegisterName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/RegisterEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/register_name"
+            android:layout_width="200pt"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="50pt"
+            android:layout_marginTop="100pt"
+            android:textSize="10pt"/>
 
-    <Button
-        android:id="@+id/RegisterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="20dp"
-        android:text="Register"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterPassword" />
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="200pt"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="50pt"
+            android:layout_below="@id/register_name"
+            android:textSize="10pt"/>
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="200pt"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50pt"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="10pt" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="50pt"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_password"
+            android:layout_marginTop="10pt"
+            android:layout_marginLeft="20pt"
+            android:layout_alignParentLeft="true"
+            android:text="REGISTER"
+            android:scaleX="1.5"
+            android:scaleY="1.5" />
+        <Button
+            android:id="@+id/register_cancel"
+            android:layout_width="50pt"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_password"
+            android:layout_marginTop="10pt"
+            android:layout_marginRight="20pt"
+            android:layout_alignParentRight="true"
+            android:text="CANCEL"
+            android:scaleX="1.5"
+            android:scaleY="1.5" />
+
+    </RelativeLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
