@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private static int minPrice = 0;
     private static int maxPrice = 0;
     private static ProductCategory category = null;
+    public static Product selected;
 
     ArrayAdapter<String> adapter;
 
@@ -179,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 nameSearch = "";
+                pageNumber = 0;
                 accountId = -1;
                 minPrice = 0;
                 maxPrice = 0;
@@ -223,6 +226,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "All Filter Applied", Toast.LENGTH_LONG).show();
             }
         });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                selected = array.get(position);
+                Intent intent = new Intent(MainActivity.this, ProductViewActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public static Product getProduct(){
+        return selected;
     }
 
     void request(ListView list){

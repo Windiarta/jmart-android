@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7096B1FF"
     tools:context=".RegisterActivity">
 
     <RelativeLayout
@@ -12,72 +13,100 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
+            android:id="@+id/image_card"
+            android:layout_width="fill_parent"
+            android:layout_height="200pt"
+            android:src="@drawable/ic_action_name" />
+
+        <TableLayout
+            android:id="@+id/table_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20pt"
-            android:fontFamily="sans-serif-black"
-            android:text="JMART"
-            android:textAlignment="center"
-            android:textColor="#410179"
-            android:textSize="30pt" />
+            android:layout_marginTop="100pt">
 
-        <EditText
-            android:id="@+id/register_name"
-            android:layout_width="200pt"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:hint="Name"
-            android:inputType="textEmailAddress"
-            android:layout_marginLeft="50pt"
-            android:layout_marginTop="100pt"
-            android:textSize="10pt"/>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30pt"
+                android:layout_marginTop="30pt"
+                android:background="@color/white">
 
-        <EditText
-            android:id="@+id/register_email"
-            android:layout_width="200pt"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:layout_marginLeft="50pt"
-            android:layout_below="@id/register_name"
-            android:textSize="10pt"/>
+                <ImageView
+                    android:layout_width="20pt"
+                    android:layout_height="20pt"
+                    app:srcCompat="@drawable/ic_baseline_person_24" />
 
-        <EditText
-            android:id="@+id/register_password"
-            android:layout_width="200pt"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/register_email"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="50pt"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textSize="10pt" />
+                <EditText
+                    android:id="@+id/register_name"
+                    android:layout_width="200pt"
+                    android:layout_height="match_parent"
+                    android:hint="Name"
+                    android:inputType="textEmailAddress"
+                    android:textSize="6pt" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30pt"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="20pt"
+                    android:layout_height="20pt"
+                    app:srcCompat="@drawable/ic_baseline_mail_24" />
+
+                <EditText
+                    android:id="@+id/register_email"
+                    android:layout_width="200pt"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/register_name"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="6pt" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30pt"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="20pt"
+                    android:layout_height="20pt"
+                    app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+                <EditText
+                    android:id="@+id/register_password"
+                    android:layout_width="200pt"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="6pt" />
+            </TableRow>
+        </TableLayout>
 
         <Button
             android:id="@+id/register_button"
-            android:layout_width="50pt"
+            android:layout_width="100pt"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_password"
+            android:layout_below="@id/table_layout"
             android:layout_marginTop="10pt"
-            android:layout_marginLeft="20pt"
-            android:layout_alignParentLeft="true"
-            android:text="REGISTER"
-            android:scaleX="1.5"
-            android:scaleY="1.5" />
+            android:layout_centerHorizontal="true"
+            android:text="REGISTER" />
+
         <Button
             android:id="@+id/register_cancel"
-            android:layout_width="50pt"
+            android:layout_width="100pt"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_password"
-            android:layout_marginTop="10pt"
-            android:layout_marginRight="20pt"
-            android:layout_alignParentRight="true"
-            android:text="CANCEL"
-            android:scaleX="1.5"
-            android:scaleY="1.5" />
+            android:layout_below="@id/register_button"
+            android:layout_centerHorizontal="true"
+            android:text="CANCEL" />
+
 
     </RelativeLayout>
 

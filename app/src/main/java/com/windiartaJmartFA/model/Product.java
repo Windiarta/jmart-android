@@ -1,6 +1,7 @@
 package com.windiartaJmartFA.model;
 
 public class Product extends Serializable {
+    public int id;
     public int accountId;
     public ProductCategory category;
     public boolean conditionUsed;
@@ -9,9 +10,4 @@ public class Product extends Serializable {
     public double price;
     public byte shipmentPlans;
     public int weight;
-
-
-    public String toString(){
-        return name;
-    }
 }

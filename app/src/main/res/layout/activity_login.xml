@@ -5,7 +5,9 @@
     android:id="@+id/LoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7096B1FF"
     tools:context=".LoginActivity">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,65 +15,92 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20pt"
-            android:fontFamily="sans-serif-black"
-            android:text="JMART"
-            android:textAlignment="center"
-            android:textColor="#410179"
-            android:textSize="30pt" />
-        <EditText
-            android:id="@+id/login_email"
-            android:layout_width="200pt"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:layout_marginLeft="50pt"
-            android:layout_marginTop="100pt"
-            android:textSize="10pt"/>
+        <ImageView
+            android:id="@+id/image_card"
+            android:layout_width="fill_parent"
+            android:layout_height="200pt"
+            android:src="@drawable/ic_action_name" />
 
-        <EditText
-            android:id="@+id/login_password"
-            android:layout_width="200pt"
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/login_email"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="50pt"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textSize="10pt" />
+            android:layout_marginTop="100pt">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30pt"
+                android:layout_marginTop="30pt"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="20pt"
+                    android:layout_height="20pt"
+                    app:srcCompat="@drawable/ic_baseline_mail_24" />
+
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_width="225dp"
+                    android:layout_height="match_parent"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="6pt"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30pt"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="200pt"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="6pt" />
+            </TableRow>
+        </TableLayout>
+
         <Button
             android:id="@+id/login_button"
-            android:layout_width="wrap_content"
+            android:layout_width="100pt"
             android:layout_height="wrap_content"
-            android:layout_below="@id/login_password"
+            android:layout_below="@id/table_layout"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10pt"
-            android:layout_centerInParent="true"
-            android:text="LOGIN"
-            android:scaleX="1.5"
-            android:scaleY="1.5"/>
+            android:text="LOGIN" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/login_button"
             android:layout_centerInParent="true"
-            android:layout_marginTop="15pt"
+            android:layout_marginTop="1pt"
             android:text="Don't Have Account?"
-            android:textSize="8pt"
-            android:textColor="#0027FF" />
+            android:textColor="#0027FF"
+            android:textSize="6pt" />
+
         <TextView
             android:id="@+id/login_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/login_button"
             android:layout_centerInParent="true"
-            android:layout_marginTop="25pt"
+            android:layout_marginTop="10pt"
             android:text="Register Now"
-            android:textSize="8pt"
-            android:textColor="#0027FF" />
+            android:textColor="#0027FF"
+            android:textSize="6pt" />
     </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,11 @@ import com.windiartaJmartFA.LoginActivity;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This will send a POST Request and receive a new store for the logged account id
+ * @author Windiarta
+ */
+
 public class StoreRequest extends StringRequest {
     private static final String URI = "http:/10.0.2.2:6969/account/%d/registerStore";
     private static final String URL = String.format(URI, LoginActivity.getLoggedAccount().id);

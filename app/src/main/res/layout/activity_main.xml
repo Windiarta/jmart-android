@@ -17,6 +17,7 @@
         android:paddingLeft="10pt"
         android:paddingTop="3pt"
         android:paddingRight="10pt"
+        android:background="#7096B1FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +75,9 @@
 
             <EditText
                 android:id="@+id/page"
-                android:layout_width="40pt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:layout_marginLeft="210dp"
                 android:text="0"
                 android:textSize="10pt" />
@@ -94,13 +96,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="30pt"
-            android:orientation="vertical"
             tools:context=".ListActivity">
 
             <ListView
                 android:id="@+id/list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></ListView>
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 

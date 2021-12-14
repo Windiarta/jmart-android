@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7096B1FF"
+    tools:context=".PaymentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="5pt"
+        android:layout_marginTop="5pt"
+        android:layout_marginRight="5pt">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50pt"
+            android:layout_marginBottom="10pt"
+            android:text="Payment"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20pt" />
+
+        <LinearLayout
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="60pt"
+                android:text="Product Count"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/dec_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/prod_count"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/inc_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count"
+            android:layout_marginTop="10pt">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textAlignment="center"
+                android:layout_marginRight="20pt"
+                android:textSize="8pt"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Shipment Address"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ship"
+            android:layout_marginTop="10pt">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipment"
+                android:textAlignment="center"
+                android:layout_marginRight="20pt"
+                android:textSize="8pt"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/shipment_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="textEnd"
+                android:text="INSTANT"
+                android:textColor="@color/purple_700" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/payment_create"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ship"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50pt"
+            android:text="CONFIRM" />
+
+        <Button
+            android:id="@+id/payment_cancel"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ship"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50pt"
+            android:text="CANCEL" />
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

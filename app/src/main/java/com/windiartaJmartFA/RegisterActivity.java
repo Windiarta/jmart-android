@@ -17,6 +17,11 @@ import com.windiartaJmartFA.request.RegisterRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * This will make a new account
+ * @author Windiarta
+ */
+
 public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

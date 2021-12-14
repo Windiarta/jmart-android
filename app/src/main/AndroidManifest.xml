@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Jmartandroid"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".BuyerHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".CreateProductActivity"
             android:exported="false" />
         <activity

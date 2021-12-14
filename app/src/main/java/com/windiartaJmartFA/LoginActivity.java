@@ -20,6 +20,10 @@ import com.windiartaJmartFA.request.LoginRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * This will be a login session and the main scene before access the main activity
+ * @author Windiarta
+ */
 public class LoginActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
     private static Account loggedAccount;
@@ -27,8 +31,6 @@ public class LoginActivity extends AppCompatActivity {
     public static Account getLoggedAccount(){
         return loggedAccount;
     }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.login_password);
         Button button = findViewById(R.id.login_button);
         TextView register = findViewById(R.id.login_register);
+
+        loggedAccount = null;
 
         button.setOnClickListener(new View.OnClickListener(){
             @Override

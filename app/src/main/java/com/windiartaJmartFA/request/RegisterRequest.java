@@ -6,6 +6,11 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This will send a POST Request and receive a new registered account
+ * @author Windiarta
+ */
+
 public class RegisterRequest extends StringRequest {
     private static final String URL = "http://10.0.2.2:6969/account/register";
     private final Map<String, String> params;

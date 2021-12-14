@@ -7,6 +7,10 @@ import com.windiartaJmartFA.model.ProductCategory;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This will send a POST Request and receive a new product
+ * @author Windiarta
+ */
 public class NewProductRequest extends StringRequest {
     private static final String URL = "http://10.0.2.2:6969/product/create";
     private final Map<String, String> params;

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7096B1FF"
+    tools:context=".ViewStoreActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="5pt"
+        android:layout_marginTop="5pt"
+        android:layout_marginRight="5pt">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50pt"
+            android:text="Payment"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20pt" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:layout_below="@id/title"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/payment_prev_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="PREV" />
+
+            <Button
+                android:id="@+id/payment_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="110dp"
+                android:text="NEXT" />
+
+            <EditText
+                android:id="@+id/payment_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginLeft="210dp"
+                android:text="0"
+                android:textSize="10pt" />
+
+            <Button
+                android:id="@+id/payment_go_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="GO" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50pt"
+            android:orientation="vertical"
+            tools:context=".ListActivity"
+            android:background="@color/white">
+
+            <ListView
+                android:id="@+id/payment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/submit_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15pt"
+        android:layout_marginTop="100pt"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#7096B1FF">
+            <TextView
+                android:id="@+id/submit_close_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="8pt"
+                android:textAlignment="center"
+                android:layout_marginTop="3pt"
+                android:layout_marginRight="3pt"
+                android:layout_marginLeft="140pt"
+                android:clickable="true"/>
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Are You Sure To Submit?"
+                android:textColor="@color/black"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="5pt"
+                android:textSize="10pt" />
+            <TextView
+                android:id="@+id/payment_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_marginLeft="15pt"
+                android:layout_marginBottom="10pt"
+                android:text="Product Count :"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+            <Button
+                android:id="@+id/payment_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_text1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10pt"
+                android:layout_marginBottom="5pt"
+                android:text="SUBMIT" />
+
+            <Button
+                android:id="@+id/payment_cancel_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_text1"
+                android:layout_marginLeft="100pt"
+                android:layout_marginRight="10pt"
+                android:layout_marginBottom="5pt"
+                android:backgroundTint="#FF0000"
+                android:text="CANCEL" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/progress_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15pt"
+        android:layout_marginTop="100pt"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#7096B1FF">
+
+            <TextView
+                android:id="@+id/progress_cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginRight="3pt"
+                android:clickable="true"
+                android:text="X"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Are You Sure To Confirm?\nDescription :"
+                android:textColor="@color/black"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="5pt"
+                android:textSize="10pt" />
+            <TextView
+                android:id="@+id/payment_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:layout_marginLeft="15pt"
+                android:layout_marginBottom="10pt"
+                android:text="Product Count :"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/progress_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_text2"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5pt"
+                android:text="OK" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

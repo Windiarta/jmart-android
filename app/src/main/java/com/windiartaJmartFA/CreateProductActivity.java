@@ -24,6 +24,11 @@ import com.windiartaJmartFA.request.NewProductRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * This will make a new product to the list
+ * @author Windiarta
+ */
+
 public class CreateProductActivity extends AppCompatActivity {
     boolean conditionUsed = false;
     @Override
@@ -85,7 +90,8 @@ public class CreateProductActivity extends AppCompatActivity {
                             JSONObject object = new JSONObject(response);
                             if(object != null){
                                 Toast.makeText(CreateProductActivity.this, "Product Added", Toast.LENGTH_LONG).show();
-                                System.out.println("Product added successfully");
+                                Intent intent = new Intent(CreateProductActivity.this, MainActivity.class);
+                                startActivity(intent);
                             }
                         } catch (JSONException e){
                             e.printStackTrace();

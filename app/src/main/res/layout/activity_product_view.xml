@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7096B1FF"
+    tools:context=".ProductViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/product_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_card"
+            android:layout_width="fill_parent"
+            android:layout_height="100pt"
+            android:background="@color/teal_200"
+            android:src="@drawable/ic_action_name" />
+
+        <TextView
+            android:id="@+id/product_price_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_card"
+            android:layout_marginLeft="5pt"
+            android:fontFamily="sans-serif"
+            android:text="Rp 10.000"
+            android:textColor="@color/black"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/product_name_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_price_view"
+            android:layout_marginLeft="5pt"
+            android:fontFamily="sans-serif"
+            android:text="Product Name"
+            android:textColor="@color/black"
+            android:textSize="10pt" />
+
+        <TableLayout
+            android:id="@+id/description_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/product_name_view"
+            android:layout_marginLeft="5pt"
+            android:layout_marginTop="15pt"
+            android:layout_marginRight="5pt">
+
+            <TableRow android:id="@+id/desc_row">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description :"
+                    android:textColor="@color/black"
+                    android:textSize="9pt" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/discount_row"
+                android:layout_below="@id/desc_row"
+                android:layout_marginTop="5pt">
+
+                <TextView
+                    android:text="Discount"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/desc_discount"
+                    android:text="10.00 %"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/weight_row"
+                android:layout_below="@id/desc_row"
+                android:layout_marginTop="5pt">
+
+                <TextView
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/desc_weight"
+                    android:text="10 kg"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/condition_row"
+                android:layout_below="@id/desc_row"
+                android:layout_marginTop="5pt">
+
+                <TextView
+                    android:text="Condition"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/desc_condition"
+                    android:text="New"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/category_row"
+                android:layout_below="@id/condition_row"
+                android:layout_marginTop="5pt">
+
+                <TextView
+                    android:text="Category"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/desc_category"
+                    android:text="FNB"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/shipment_row"
+                android:layout_below="@id/condition_row"
+                android:layout_marginTop="5pt">
+
+                <TextView
+                    android:text="Shipment"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/desc_shipment"
+                    android:text="INSTANT"
+                    android:textColor="@color/black"
+                    android:textSize="7pt" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/buy_product"
+            android:layout_width="match_parent"
+            android:layout_height="30pt"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="5pt"
+            android:layout_marginBottom="5pt"
+            android:text="BUY NOW"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
